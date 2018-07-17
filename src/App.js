@@ -6,6 +6,12 @@ const Test = () => <div>Testing</div>;
 
 const Title = ({text}) => <div>{text}</div>;
 
+export class Link extends Component {
+  render() {
+    return this.props.hide ? null : <a href={this.props.address}>Click</a>;
+  }
+};
+
 class App extends Component {
   render() {
     return (
