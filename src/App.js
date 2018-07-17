@@ -17,9 +17,16 @@ class App extends Component {
     super(props)
     this.state = {
       input: '',
+      lifeCycle: '',
       mainColor: 'blue',
       on: false,
     }
+  }
+  componentDidMount() {
+    this.setState({ lifeCycle: 'componentDidMount' });
+  }
+  componentWillReceiveProps() {
+    this.setState({ lifeCycle: 'componentWillReceiveProps' });
   }
   render() {
     return (
@@ -37,6 +44,7 @@ class App extends Component {
         <button onClick={() => this.setState({on: true})}></button>
         <h2>{this.state.input}</h2>
         <input onChange={(e) => this.setState({input: e.currentTarget.value})} type="text" />
+        <p className="lifeCycle">{this.state.lifeCycle}</p>
         <ul>
           <li></li>
           <li></li>
