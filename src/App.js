@@ -13,6 +13,13 @@ export class Link extends Component {
 };
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      input: '',
+      on: false,
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -24,6 +31,10 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <p className="button-state">{this.state.on ? 'Yes!' : 'No!'}</p>
+        <button onClick={() => this.setState({on: true})}></button>
+        <h2>{this.state.input}</h2>
+        <input onChange={(e) => this.setState({input: e.currentTarget.value})} type="text" />
         <ul>
           <li></li>
           <li></li>

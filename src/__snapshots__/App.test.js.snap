@@ -30,6 +30,19 @@ exports[`<App /> mount rendering matches the snapshot 1`] = `
       </code>
        and save to reload.
     </p>
+    <p
+      className="button-state"
+    >
+      No!
+    </p>
+    <button
+      onClick={[Function]}
+    />
+    <h2 />
+    <input
+      onChange={[Function]}
+      type="text"
+    />
     <ul>
       <li />
       <li />
@@ -69,6 +82,19 @@ exports[`<App /> shallow rendering matches the snapshot 1`] = `
     </code>
      and save to reload.
   </p>
+  <p
+    className="button-state"
+  >
+    No!
+  </p>
+  <button
+    onClick={[Function]}
+  />
+  <h2 />
+  <input
+    onChange={[Function]}
+    type="text"
+  />
   <ul>
     <li />
     <li />
