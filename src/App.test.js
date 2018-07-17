@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App, { Link } from './App';
-import { configure, shallow } from 'enzyme';
+import { configure, shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import enzymeToJson from 'enzyme-to-json';
 
 configure({ adapter: new Adapter() });
 
-describe('<App />', () => {
+describe('<App /> shallow rendering', () => {
   const wrapper = shallow(<App />);
   // const wrapper = shallow(<App />, {context: {}, disableLifecycleMethods: bool});
   it('should contain 1 p element', () => {
@@ -24,6 +24,19 @@ describe('<App />', () => {
   it('matches the snapshot', () => {
     const tree = shallow(<App />);
     expect(enzymeToJson(tree)).toMatchSnapshot();
+  });
+});
+
+describe('<App /> mount rendering', () => {
+  it('h1 contains correct text', () => {
+    const wrapper = mount(<App />);
+    expect(wrapper.find('h1').text()).toBe('Welcome to React');
+    wrapper.unmount();
+  });
+  it('matches the snapshot', () => {
+    const tree = mount(<App />);
+    expect(enzymeToJson(tree)).toMatchSnapshot();
+    tree.unmount();
   });
 });
 
