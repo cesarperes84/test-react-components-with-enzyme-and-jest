@@ -17,6 +17,7 @@ class App extends Component {
     super(props)
     this.state = {
       input: '',
+      mainColor: 'blue',
       on: false,
     }
   }
@@ -26,6 +27,7 @@ class App extends Component {
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h1 className="App-title">Welcome to React</h1>
+          <h3 className={this.state.mainColor}>Everyone is Welcome!</h3>
         </header>
         <Title text="Some title" />
         <p className="App-intro">
