@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import logo from './logo.svg';
+import './App.css';
 
 const Test = () => <div>Testing</div>;
 
@@ -21,6 +21,10 @@ class App extends Component {
       mainColor: 'blue',
       on: false,
     }
+  }
+  handleStrings(str) {
+    if (str === 'Hello World') return true;
+    return false;
   }
   componentDidMount() {
     this.setState({ lifeCycle: 'componentDidMount' });
