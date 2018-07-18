@@ -8,6 +8,11 @@ exports[`<App /> mount rendering matches the snapshot 1`] = `
     <header
       className="App-header"
     >
+      <img
+        alt="logo"
+        className="App-logo"
+        src="logo.svg"
+      />
       <h1
         className="App-title"
       >
@@ -74,6 +79,11 @@ exports[`<App /> shallow rendering matches the snapshot 1`] = `
   <header
     className="App-header"
   >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
     <h1
       className="App-title"
     >
